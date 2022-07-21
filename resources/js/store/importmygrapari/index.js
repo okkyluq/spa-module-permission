@@ -1,8 +1,6 @@
 import Axios from '../../config/Axios'
 import store from '../../store'
 
-
-
 const dataimportmygrapari = {
     namespaced: true,
     state: () => ({

@@ -310,6 +310,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   }),
   mounted: function mounted() {
+    this.redirectIfNotAcces('view_otoritas_menu');
     this.getRole();
     this.getAllMenu();
   }
@@ -1356,15 +1357,17 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "block-options" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-success",
-                  attrs: { type: "button" },
-                  on: { click: _vm.updateOtoritasMenu },
-                },
-                [_vm._v("Update Otoritas Menu")]
-              ),
+              _vm.checkAcces("create_otoritas_menu")
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success",
+                      attrs: { type: "button" },
+                      on: { click: _vm.updateOtoritasMenu },
+                    },
+                    [_vm._v("Update Otoritas Menu")]
+                  )
+                : _vm._e(),
             ]),
           ]),
           _vm._v(" "),

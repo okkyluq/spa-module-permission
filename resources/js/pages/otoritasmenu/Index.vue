@@ -7,7 +7,7 @@
                         Pengaturan Otoritas Menu
                     </h3>
                     <div class="block-options">
-                        <button type="button" class="btn btn-success" @click="updateOtoritasMenu">Update Otoritas Menu</button>
+                        <button type="button" class="btn btn-success" v-if="checkAcces('create_otoritas_menu')" @click="updateOtoritasMenu">Update Otoritas Menu</button>
                     </div>
                 </div>
                 <div class="block-content">
@@ -231,6 +231,7 @@ export default {
 
     },
     mounted() {
+        this.redirectIfNotAcces('view_otoritas_menu')
         this.getRole();
         this.getAllMenu();
     }

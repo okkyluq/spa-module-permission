@@ -8,6 +8,7 @@
                     </h3>
                     <div class="block-options">
                         <button type="button" class="btn btn-success" v-if="checkAcces('import_import_mygrapari')"
+                            @click="$store.dispatch('adddataimportmygrapari/toggleSidebar', true)"
                         ><i class="fas fa-plus"></i> Import Data</button>
                     </div>
                 </div>
@@ -62,6 +63,7 @@
 					</div>
                 </div>
             </div>
+            <CreateForm />
         </div>
     </layout-admin>
 </template>
@@ -69,9 +71,10 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import LayoutAdmin from '../../layouts/LayoutAdmin.vue'
+import CreateForm from './Create.vue';
 export default {
     components: {
-        LayoutAdmin
+        LayoutAdmin, CreateForm
     },
     data() {
         return {

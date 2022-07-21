@@ -10,6 +10,7 @@ import dataproduk from './dataproduk/index';
 import adddataproduk from './dataproduk/add';
 import editdataproduk from './dataproduk/edit';
 import dataimportmygrapari from './importmygrapari/index';
+import adddataimportmygrapari from './importmygrapari/import';
 import transaksifivas from './transaksifivas/index';
 import addtransaksifivas from './transaksifivas/add';
 import edittransaksifivas from './transaksifivas/edit';
@@ -27,7 +28,7 @@ export default new Vuex.Store({
         datamenu,adddatamenu,
         otoritasmenu,
         dataproduk,adddataproduk,editdataproduk,
-        dataimportmygrapari,
+        dataimportmygrapari, adddataimportmygrapari,
         transaksifivas,addtransaksifivas, edittransaksifivas
     },
     plugins: [ui_persisted],

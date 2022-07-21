@@ -14,9 +14,11 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['middleware' => 'jwt.verify'], function (){
-    Route::get('/transaksifivas', 'TransaksiFivasController@index');
-    Route::post('/transaksifivas', 'TransaksiFivasController@store');
-    Route::get('/transaksifivas/{id}/edit', 'TransaksiFivasController@edit');
-    Route::put('/transaksifivas/{id}', 'TransaksiFivasController@update');
-    Route::delete('/transaksifivas/{id}', 'TransaksiFivasController@destroy');
+    // Route::get('/transaksifivas', 'TransaksiFivasController@index');
+    // Route::post('/transaksifivas', 'TransaksiFivasController@store');
+    // Route::get('/transaksifivas/{id}/edit', 'TransaksiFivasController@edit');
+    // Route::put('/transaksifivas/{id}', 'TransaksiFivasController@update');
+    // Route::delete('/transaksifivas/{id}', 'TransaksiFivasController@destroy');
+
+    Route::resource('transaksifivas', 'TransaksiFivasController');
 });
