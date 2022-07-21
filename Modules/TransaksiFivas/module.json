@@ -1,0 +1,13 @@
+{
+    "name": "TransaksiFivas",
+    "alias": "transaksifivas",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TransaksiFivas\\Providers\\TransaksiFivasServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

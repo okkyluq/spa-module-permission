@@ -1,0 +1,13 @@
+{
+    "name": "ImportVisit",
+    "alias": "importvisit",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ImportVisit\\Providers\\ImportVisitServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

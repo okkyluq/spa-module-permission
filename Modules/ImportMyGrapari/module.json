@@ -1,0 +1,13 @@
+{
+    "name": "ImportMyGrapari",
+    "alias": "importmygrapari",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ImportMyGrapari\\Providers\\ImportMyGrapariServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

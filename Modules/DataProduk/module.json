@@ -1,0 +1,13 @@
+{
+    "name": "DataProduk",
+    "alias": "dataproduk",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DataProduk\\Providers\\DataProdukServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
