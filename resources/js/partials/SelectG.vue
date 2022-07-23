@@ -123,7 +123,7 @@ export default {
 		search: _.debounce((search, vm) => {
 			vm.loader = true;
 			vm.list_item = null;
-            Axios.defaults.headers.common['Authorization'] = `Bearer ${store.state.auth.token}`;
+            Axios.defaults.headers.common['Authorization'] = `Bearer ${vm.$store.state.AUTH.token}`;
 			Axios.get(`${vm.url}?q=${escape(search)}`)
 			.then(res => {
 				if(res.status == 200){

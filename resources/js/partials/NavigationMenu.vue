@@ -52,22 +52,21 @@ export default {
         }
     },
     computed: {
-        ...mapState('ui', {
+        ...mapState('UI', {
             all_menu : state => state.menu_all
         }),
     },
     methods: {
-        ...mapActions('ui', {
+        ...mapActions('UI', {
             setMenuAll: 'setMenuAll'
         })
     },
     mounted() {
         let self = this;
         if(this.all_menu === null){
-            Axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.auth.token}`;
+            Axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.AUTH.token}`;
             Axios.get('getmenuuser')
             .then(function(response){
-                console.log(response.data)
                 self.setMenuAll(response.data);
             })
             .catch(function(error){

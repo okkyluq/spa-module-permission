@@ -21,7 +21,7 @@ export default {
         LeftMenu, HeaderTop, FooterTop
     },
     computed: {
-        ...mapState('ui', {
+        ...mapState('UI', {
             sidebar_active : state => state.sidebar_active,
             header_mode_dark: state => state.header_mode_dark,
             mode_dark: state => state.mode_dark

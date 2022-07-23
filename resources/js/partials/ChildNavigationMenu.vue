@@ -35,7 +35,7 @@ export default {
 		}
     },
     computed: {
-        ...mapState('auth', {
+        ...mapState('AUTH', {
             permission: state => state.permission
         }),
     },

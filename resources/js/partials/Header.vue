@@ -80,11 +80,11 @@ import Axios from '../config/Axios'
 import { mapActions, mapState } from 'vuex'
 export default {
     computed: {
-        ...mapState('ui', {
+        ...mapState('UI', {
             menu_user: state => state.menu_user,
             notification_user: state => state.notification_user,
         }),
-        ...mapState('auth', {
+        ...mapState('AUTH', {
             user: state => state.user,
             token: state => state.token
         })
@@ -96,13 +96,13 @@ export default {
         hiddenNotificationUser(){
             this.notification_user === false || this.setNotificationUser()
         },
-        ...mapActions('ui', {
+        ...mapActions('UI', {
             minimizeSidebar : 'minimizeSidebar',
             setMenuUser: 'setMenuUser',
             setNotificationUser: 'setNotificationUser',
             setDefaultUi: 'setDefaultUi'
         }),
-        ...mapActions('auth', {
+        ...mapActions('AUTH', {
             clearTokenUser: 'clearTokenUser'
         }),
         logout(){

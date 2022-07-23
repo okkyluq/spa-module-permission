@@ -33,7 +33,7 @@ export default {
             console.log(data)
         },
         asyncFind(query){
-            Axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.auth.token}`;
+            Axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.AUTH.token}`;
             Axios.get('dataproduk/getdataprodukbyname', {params: { q: query }})
                 .then(response => {
                     let respon = response.data.data;

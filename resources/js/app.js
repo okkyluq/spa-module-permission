@@ -1,7 +1,7 @@
 
 import Vue from 'vue';
 import router from './router'
-import store from './store'
+
 import vClickOutside from 'v-click-outside'
 import VueFontAwesomePicker from "vfa-picker";
 import Multiselect from 'vue-multiselect'
@@ -21,7 +21,7 @@ import 'vue-select/dist/vue-select.css';
 import _ from 'lodash';
 import 'vue-multiselect/dist/vue-multiselect.min.css';
 import VueTheMask from 'vue-the-mask'
-import Axios from './config/Axios';
+import store from './store'
 
 // require('./bootstrap');
 Vue.use(vClickOutside)
@@ -39,6 +39,8 @@ Vue.use(require('vue-moment'));
 Vue.use(VueTheMask)
 
 window.Vue = require('vue').default;
+
+
 
 const app = new Vue({
     mixins: [RedirectIfNotAcces, CheckAcces],
